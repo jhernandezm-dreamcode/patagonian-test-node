@@ -34,6 +34,7 @@ export class ProcessFileController {
       file = await toJson.fromFile(request.file.path);
       await database.startDatabase();
       const insertManyResult = await database.getSchema().insertMany(file);
+      console.log(insertManyResult);
       objectResponse = await utils.makeResponse(
         STATUS_CODE.SUCCESS,
         STATUS_MESSAGE.SUCCESS,
