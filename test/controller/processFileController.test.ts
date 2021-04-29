@@ -8,7 +8,7 @@ const toJson = csvtojson();
 const mongoDb = new Database();
 const processFileController = new ProcessFileController();
 
-describe("ProcessFileController", async () => {
+describe("ProcessFileController", () => {
   it("Success response", async () => {
     const jsonMock: any = toJsonMock;
     const toJsonFrom: any = jest
