@@ -7,7 +7,7 @@
     "start": "tsc && node dist/app.js",
     "test": "jest --verbose --coverage --detectOpenHandles",
     "nodemon": "tsc && nodemon --config nodemon.json src/index.ts",
-    "build":"tsc"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -34,12 +34,16 @@
     "mongodb-memory-server": "^6.9.6",
     "mongoose": "^5.12.6",
     "multer": "^1.4.2",
+    "nodemon": "^2.0.7",
     "ts-jest": "^26.5.5"
   },
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node",
     "testTimeout": 100000,
-    "testPathIgnorePatterns" : ["/node_modules/", "/dist/"]
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/"
+    ]
   }
 }
