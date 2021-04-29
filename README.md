@@ -20,3 +20,14 @@ This is a backend test where according with a set of data from a csv file are ne
 - git clone https://github.com/jhernandezm-dreamcode/patagonian-test-node.git
 - npm install
 ~~~
+- - -
+2. Run the server
+    - If you have nodemon installed you can the following command
+    ~~~
+    npm run nodemon
+    ~~~
+    - In the other hand run the following command instead
+    ~~~
+    npm run start
+    ~~~
+
