@@ -31,4 +31,14 @@ describe("ProcessFileController", async () => {
     });
     expect(response).toEqual(BAD_RESPONSE.BAD_RESPONSE_1);
   });
+
+  it("Bad response file is null", async () => {
+    request.file = null
+    const response: any = await processFileController.processFile(request, {
+      json: () => {
+        return { statusCode: 400, message: "Please choose a file", data: null };
+      },
+    });
+    expect(response).toEqual(BAD_RESPONSE.BAD_RESPONSE_2);
+  });
 });

@@ -12,7 +12,6 @@ const utils = new Utils();
  * @description ProcessFileController class
  */
 export class ProcessFileController {
-
   /**
    * @name processFile
    * @description Method for take the registers from CSV file and insert in Mongo
@@ -23,6 +22,14 @@ export class ProcessFileController {
   public async processFile(request: any, response: any): Promise<any> {
     let file: any;
     let objectResponse: any;
+    if (request?.file === undefined || request?.file === null) {
+      objectResponse = await utils.makeResponse(
+        STATUS_CODE.NO_FILE,
+        STATUS_MESSAGE.NO_FILE,
+        null
+      );
+      return response.json(objectResponse);
+    }
     try {
       file = await toJson.fromFile(request.file.path);
       await database.startDatabase();

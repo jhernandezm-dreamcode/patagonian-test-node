@@ -1,9 +1,11 @@
 export enum STATUS_CODE {
     'SUCCESS'=200,
-    'ERROR' = 500
+    'ERROR' = 500,
+    'NO_FILE' = 400
 }
 
 export enum STATUS_MESSAGE {
     "SUCCESS" = "SUCCESS",
-    "ERROR" = "ERROR"
+    "ERROR" = "ERROR",
+    'NO_FILE' = "Please choose a file"
 }

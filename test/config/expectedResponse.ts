@@ -4,4 +4,9 @@ export const EXPECTED_RESPONSE = {
 
 export const BAD_RESPONSE = {
   BAD_RESPONSE_1: { data: null, message: "ERROR", statusCode: 500 },
+  BAD_RESPONSE_2: {
+    statusCode: 400,
+    message: "Please choose a file",
+    data: null,
+  },
 };
