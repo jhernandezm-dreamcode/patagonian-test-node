@@ -2,7 +2,7 @@ export const Vehicle = {
   uuid: {
     type: String,
     unique: true,
-    required: [true, "Please provide the product UUID"],
+    required: [true, "UUID is mandatory"],
   },
   vin: {
     type: String,
