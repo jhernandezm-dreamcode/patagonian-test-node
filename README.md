@@ -4,8 +4,8 @@ This is a backend test where according with a set of data from a csv file are ne
 
 ## Prerequisites
 
--Nodejs
--Git
+- Nodejs
+- Git
 * * *
 ## Recommended
 
