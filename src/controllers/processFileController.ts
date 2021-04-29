@@ -3,9 +3,8 @@ import { Database } from "../db/mongoDBSettings";
 import { Utils } from "../utils/utils";
 import { STATUS_CODE, STATUS_MESSAGE } from "../settings/settings";
 
-const toJson = csvtojson();
-const database = new Database();
-const utils = new Utils();
+const database = new Database()
+const schema = database.getSchema();
 
 /**
  * @name ProcessFileController
@@ -20,6 +19,8 @@ export class ProcessFileController {
    * @returns Object with the operation result
    */
   public async processFile(request: any, response: any): Promise<any> {
+    const toJson = csvtojson();
+    const utils = new Utils();
     let file: any;
     let objectResponse: any;
     if (request?.file === undefined || request?.file === null) {
@@ -49,9 +50,9 @@ export class ProcessFileController {
         file,
         providerName
       );
-      console.log("alll-data",allData)
       await database.startDatabase();
-      const insertManyResult = await database.getSchema().insertMany(allData);
+      const insertManyResult = await schema.insertMany(allData);
+      await database.endDatabase();
       objectResponse = await utils.makeResponse(
         STATUS_CODE.SUCCESS,
         STATUS_MESSAGE.SUCCESS,
@@ -66,7 +67,6 @@ export class ProcessFileController {
         null
       );
     }
-    await database.endDatabase();
     return response.json(objectResponse);
   }
 

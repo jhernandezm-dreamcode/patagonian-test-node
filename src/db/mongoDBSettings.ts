@@ -14,7 +14,7 @@ export class Database {
    */
   public getSchema(): any {
     const vehicleSchema: any = new mongoose.Schema(Vehicle);
-    return mongoose.model("vehicle", vehicleSchema);
+    return mongoose.model("Vehicle", vehicleSchema);
   }
 
   /**
