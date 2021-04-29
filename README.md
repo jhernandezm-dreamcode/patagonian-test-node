@@ -9,7 +9,7 @@ This is a backend test where according with a set of data from a csv file are ne
 * * *
 ## Recommended
 
--Nodemon
+- Nodemon
 * * *
 
 ## How to Run
@@ -17,6 +17,6 @@ This is a backend test where according with a set of data from a csv file are ne
 1. Clone the repository and install dependencies
 
 ~~~
-git clone https://github.com/jhernandezm-dreamcode/patagonian-test-node.git
-npm install
+- git clone https://github.com/jhernandezm-dreamcode/patagonian-test-node.git
+- npm install
 ~~~
