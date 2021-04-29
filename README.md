@@ -22,11 +22,11 @@ This is a backend test where according with a set of data from a csv file are ne
 ~~~
 - - -
 2. Run the server
-    - If you have nodemon installed you can execute the following command
+    - You can execute the following commands
     ~~~
     npm run nodemon
     ~~~
-    - In other case xecute the following command instead
+    or 
     ~~~
     npm run start
     ~~~
