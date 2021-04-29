@@ -45,4 +45,15 @@ The project is configured for run in that url
 This is a picture about postman settings
 
 ![postman settings](https://github.com/jhernandezm-dreamcode/patagonian-test-node/blob/main/images/1.png)
+- - -
+## Notes
+
+1. In folder test_files there are many files for prove the app, each one with 1000 registers
+
+2. In case that you want avoid the postman configurations, you can import this postman collection [postman collection](https://www.getpostman.com/collections/94cf0c96910999b03e1f)
+
+3. The tests cover 95% of code if you wan to execute the test run:
+    ~~~
+    npm run test
+    ~~~
 
