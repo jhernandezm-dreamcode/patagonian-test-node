@@ -46,13 +46,13 @@ The project is configured for run in that url
 
 This is a picture about postman settings
 
-![postman settings](https://github.com/jhernandezm-dreamcode/patagonian-test-node/blob/main/images/1.png)
+![postmansettings](https://github.com/jhernandezm-dreamcode/patagonian-test-node/blob/main/images/1.png)
 
 5. Now in your postman choose params options, then in the field key type "provider" in the value any string, this is the provider name
 
 This is a picture about postman settings
 
-![postman settings 2](https://github.com/jhernandezm-dreamcode/patagonian-test-node/blob/main/images/2.png)
+![postmansettings2](https://github.com/jhernandezm-dreamcode/patagonian-test-node/blob/main/images/2.png)
 - - -
 ## Notes
 
