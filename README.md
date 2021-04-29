@@ -52,7 +52,7 @@ This is a picture about postman settings
 
 This is a picture about postman settings
 
-![postmansettings2](https://github.com/jhernandezm-dreamcode/patagonian-test-node/blob/main/images/2.png)
+![postmansettings2](https://github.com/jhernandezm-dreamcode/patagonian-test-node/blob/252bc4329f4a6ff92b9643bea9a603bfd6796f49/images/2.png)
 - - -
 ## Notes
 
