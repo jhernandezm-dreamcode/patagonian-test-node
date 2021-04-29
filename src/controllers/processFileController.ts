@@ -16,8 +16,8 @@ export class ProcessFileController {
   /**
    * @name processFile
    * @description Method for take the registers from CSV file and insert in Mongo
-   * @param request 
-   * @param response 
+   * @param request
+   * @param response
    * @returns Object with the operation result
    */
   public async processFile(request: any, response: any): Promise<any> {
