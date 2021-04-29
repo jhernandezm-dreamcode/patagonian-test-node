@@ -1,3 +1,7 @@
+/**
+ * @name Utils
+ * @description Utils class
+ */
 export class Utils {
   public makeResponse(
     statusCode: number,
