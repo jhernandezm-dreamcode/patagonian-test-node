@@ -31,4 +31,7 @@ export const Vehicle = {
   updateDate: {
     type: Date,
   },
+  provider:{
+    type: String
+  }
 };

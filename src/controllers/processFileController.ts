@@ -30,11 +30,28 @@ export class ProcessFileController {
       );
       return response.json(objectResponse);
     }
+
+    if (
+      request.query?.provider === undefined ||
+      request.query?.provider === null
+    ) {
+      objectResponse = await utils.makeResponse(
+        STATUS_CODE.NO_FILE,
+        STATUS_MESSAGE.NO_PROVIDER,
+        null
+      );
+      return response.json(objectResponse);
+    }
+    const providerName: string = request.query.provider;
     try {
       file = await toJson.fromFile(request.file.path);
+      const allData: any = await processFileController.buildAllData(
+        file,
+        providerName
+      );
+      console.log("alll-data",allData)
       await database.startDatabase();
-      const insertManyResult = await database.getSchema().insertMany(file);
-      console.log(insertManyResult);
+      const insertManyResult = await database.getSchema().insertMany(allData);
       objectResponse = await utils.makeResponse(
         STATUS_CODE.SUCCESS,
         STATUS_MESSAGE.SUCCESS,
@@ -42,12 +59,23 @@ export class ProcessFileController {
       );
     } catch (error) {
       console.log("error", error);
+      await database.endDatabase();
       objectResponse = await utils.makeResponse(
         STATUS_CODE.ERROR,
         STATUS_MESSAGE.ERROR,
         null
       );
     }
+    await database.endDatabase();
     return response.json(objectResponse);
   }
+
+  private async buildAllData(data: any[], providerName): Promise<any> {
+    for (const iterator of data) {
+      iterator.provider = providerName;
+    }
+    return data;
+  }
 }
+
+const processFileController = new ProcessFileController();

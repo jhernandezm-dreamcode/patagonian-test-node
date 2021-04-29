@@ -6,6 +6,6 @@ const router = express.Router();
 const upload = multer({ dest: 'uploads/' })
 const processFileController = new ProcessFileController();
 
-router.route("/upload").post(upload.single('file'),processFileController.processFile).all();
+router.route("/upload").post(upload.single('file'),processFileController.processFile);
 
 export default router;

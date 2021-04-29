@@ -31,9 +31,16 @@ export class Database {
         useFindAndModify: false,
         useCreateIndex: true,
       });
-      console.log("DB Connected");
     } catch (error) {
-      console.log("error");
+      console.log("error",error);
     }
+  }
+
+  /**
+   * @name endDatabase
+   * @description method for end the connection
+   */
+  public async endDatabase():Promise<void>{
+    await mongoose.disconnect();
   }
 }

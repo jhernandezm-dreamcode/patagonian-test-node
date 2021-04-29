@@ -14,14 +14,17 @@ export const toJsonMock = [
 ];
 
 export const request = {
-    file: {
-        fieldname: 'file',
-        originalname: 'MOCK_DATA (5).csv',
-        encoding: '7bit',
-        mimetype: 'text/csv',
-        destination: 'uploads/',
-        filename: 'b1c8a3a7d6dac5ec9b062237bbec8748',
-        path: 'uploads/b1c8a3a7d6dac5ec9b062237bbec8748',
-        size: 121223
-      }
-}
+  file: {
+    fieldname: "file",
+    originalname: "MOCK_DATA (5).csv",
+    encoding: "7bit",
+    mimetype: "text/csv",
+    destination: "uploads/",
+    filename: "b1c8a3a7d6dac5ec9b062237bbec8748",
+    path: "uploads/b1c8a3a7d6dac5ec9b062237bbec8748",
+    size: 121223,
+  },
+  query: {
+    provider: "Company A",
+  },
+};

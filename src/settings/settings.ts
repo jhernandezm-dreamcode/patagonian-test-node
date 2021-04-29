@@ -7,5 +7,6 @@ export enum STATUS_CODE {
 export enum STATUS_MESSAGE {
     "SUCCESS" = "SUCCESS",
     "ERROR" = "ERROR",
-    'NO_FILE' = "Please choose a file"
+    'NO_FILE' = "Please choose a file",
+    'NO_PROVIDER' = "Please indicates the provider name"
 }
